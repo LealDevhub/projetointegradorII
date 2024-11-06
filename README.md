@@ -1,3 +1,6 @@
+BAIXAR O PROJETO, PARA RODAR NA MÁQUINA LOCAL E FAZER MUDANÇAS NO PROJETO 
+DEVERÁ IR EM SETTINGS.PY NA LINHA 26 MUDAR DEBUG = TRUE PARA DEBUG = FALSE
+
 1. Instalar Python e pip
 
 Certifique-se de que o Python e o pip estão instalados:
