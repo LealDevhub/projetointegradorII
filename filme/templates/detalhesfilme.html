@@ -6,8 +6,17 @@ HomeFilmes Hashflix
 
 
 {% block content %}
+
+<style>
+.custom-modal {
+  max-width: 80%; /* Largura máxima */
+  height: 100%; /* Altura */
+  overflow-y: auto; /* Permite rolagem se o conteúdo exceder a altura */
+}
+</style>
+
 <main class='bg-primary_black min-h-screen w-full'>
-    <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex  items-end bg-cover" style="background-image: url('{{ object.thumb.url }}');">
+    <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex  items-end bg-cover bg-center" style="background-image: url('{{ object.thumb.url }}');">
         <div>
             <h2 class="text-6xl font-semibold text-white my-4">
                 {{ object.titulo }}
@@ -15,15 +24,33 @@ HomeFilmes Hashflix
             <p class=" w-11/12 md:w-5/12 font-medium text-white my-4">
                 {{ object.descricao|slice:":100" }}...
             </p>
-            <div class="flex my-4">
-                <a href="{{ object.episodios.first.video }}">
-                    <button class="flex items-center bg-white py-2 px-5 rounded-md" style='color:black;'>
+            
+                <!--<a href="{{ object.episodios.first.video }}">-->
+                    <button class="flex items-center bg-white py-2 px-5 rounded-md" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style='color:black;'>
                         <ion-icon name="play" class="text-2xl"></ion-icon>
                         <span class="ml-3 font-medium">
                             Play
                         </span>
                     </button>
-                </a>
+                
+            
+        </div>
+
+        <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-xxl-downs">
+                <div class="modal-content ">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">{{ object.titulo }}</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://www.youtube.com/embed/p1K-01z3raE?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                 
+                </div>
+                </div>
             </div>
         </div>
     </section>
@@ -40,18 +67,7 @@ HomeFilmes Hashflix
                 </p>
             </div>
 
-            <div style='margin-top:2rem;margin-bottom:2rem;'>
-                <h2 class="text-gray-200 text-3xl font-medium">
-                    Episódios
-                </h2>
-                {% for episodio in object.episodios.all %}
-                    <h3 class='text-lg'>
-                        <a href="{{ episodio.video }}">
-                            <p>Episódio {{ forloop.counter }}: {{ episodio.titulo }}</p>
-                        </a>
-                    </h3>
-                {% endfor %}
-            </div>
+            
 
         </div>
     </section>
@@ -74,5 +90,7 @@ HomeFilmes Hashflix
     </section>
 
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 {% endblock %}

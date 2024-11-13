@@ -13,7 +13,7 @@ class Homepage(FormView):
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated: #usuario esta autenticado:
             # redireciona para a homefilmes
-            return redirect('filme:homefilmes')
+            return redirect('filme:dashboard')
         else:
             return super().get(request, *args, **kwargs) # redireciona para a homepage
 
@@ -27,7 +27,7 @@ class Homepage(FormView):
 
 
 class Homefilmes(LoginRequiredMixin, ListView):
-    template_name = "homefilmes.html"
+    template_name = "dashboard.html"
     model = Filme
     # object_list -> lista de itens do modelo
 
@@ -75,7 +75,7 @@ class Paginaperfil(LoginRequiredMixin, UpdateView):
     fields = ['first_name', 'last_name', 'email']
 
     def get_success_url(self):
-        return reverse('filme:homefilmes')
+        return reverse('filme:dashboard')
 
 
 class Criarconta(FormView):
