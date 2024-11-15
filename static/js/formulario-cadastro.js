@@ -11,12 +11,12 @@ function createUrl() {
   var cep = document.querySelector("#validationDefault05").value
 
 
-  message = `Primeiro Nome: ${primeiro_nome},
-             Sobrenome: ${sobrenome},
-             Nome de Usuário: ${usuario},
-             Cidade: ${cidade},
-             Estado: ${estado},
-             Cep: ${cep},
+  message = `*Primeiro Nome*: ${primeiro_nome},
+             *Sobrenome*: ${sobrenome},
+             *Nome de Usuário*: ${usuario},
+             *Cidade*: ${cidade},
+             *Estado*: ${estado},
+             *Cep*: ${cep},
              `
 
   var messageUri = encodeURI(message)
