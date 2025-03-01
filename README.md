@@ -1,9 +1,29 @@
-<img src="media/thumb_filmes/having-fun.png">
+# 📚 Escola de Inglês Having Fun
 
-# Escola de Inglês Having Fun
-Sistema de acesso à cursos por assinatura para ensino de inglês para crianças, desde o nível iniciante até o nível avançado.
+O sistema de acesso a cursos por assinatura para o ensino de inglês para crianças, desde o nível iniciante até o nível avançado.
 
-# Como Rodar o Projeto Localmente
+![Having Fun](media/thumb_filmes/having-fun.png)
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **Python** & **pip**: Usado para a configuração do ambiente e gerenciamento das dependências.
+- **Django**: Framework principal para o desenvolvimento web.
+- **Node.js**: Utilizado para gerenciar as dependências do Frontend.
+- **TailwindCSS**: Framework CSS para estilização.
+- **Bootstrap**: Framework CSS adicional para layout e responsividade.
+
+### Bibliotecas Python Utilizadas
+
+- **Django Crispy Forms** & **Crispy Bootstrap5**: Para a personalização de formulários.
+- **Pillow**: Para manipulação de imagens.
+- **dj-database-url**: Facilita a configuração do banco de dados.
+- **WhiteNoise**: Para servir arquivos estáticos de maneira eficiente.
+
+---
+
+# 🛠 Como Rodar o Projeto Localmente
 
 Siga as etapas abaixo para rodar este projeto na sua máquina local e fazer alterações. Para desabilitar o modo de depuração, altere o valor de `DEBUG` no arquivo `settings.py` de `True` para `False` na linha 26.
 
@@ -126,3 +146,9 @@ Por fim, execute o servidor do Django:
 python manage.py runserver
 ```
 Agora, o projeto estará rodando localmente em [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+
+#💡 Contribuição
+Fique à vontade para contribuir com melhorias! Basta abrir uma issue ou fazer um pull request.
+
+#📜 Licença
+Este projeto foi desenvolvido pelos alunos da UNIVESP - DRP14-PJI110-SALA-006GRUPO-004 ❤️ e está disponível para fins acadêmicos e educacionais.
