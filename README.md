@@ -28,12 +28,12 @@ No Visual Studio Code (VSCode), siga os passos abaixo:
 
 ### 1. Instalar a extensão Python:
 
-    * Abra o VSCode e vá para a seção de Extensões (ícone de quadrados empilhados no lado esquerdo).
-    * Pesquise por "Python" e clique em <strong>Install</strong>.
+   - Abra o VSCode e vá para a seção de Extensões (ícone de quadrados empilhados no lado esquerdo).
+   - Pesquise por "Python" e clique em <strong>Install</strong>.
 
 ### 2. Configurar o interpretador Python:
 
-    * Após instalar a extensão, configure o interpretador Python para usar o ambiente virtual que você criará nas próximas etapas.
+   - Após instalar a extensão, configure o interpretador Python para usar o ambiente virtual que você criará nas próximas etapas.
 
 ---
 
@@ -76,26 +76,26 @@ pip install -r requirements.txt
 Caso o arquivo <code>requirements.txt</code> não exista, instale as dependências manualmente:
 
    1. Instale o Django:
-    ```bash
-    pip install django
-    ``` 
-   2. Instale o Pillow (para manipulação de imagens):
-    ```bash
-    pip install Pillow
-    ```
-   3. Instale o <code>dj_database_url</code> para configurar o banco de dados:
-    ```bash
-    pip install dj-database-url
-    ```
-   4. Instale o <code>django-crispy-forms</code> e <code>crispy-bootstrap5</code> para melhorar os formulários:
-    ```bash
-    pip install django-crispy-forms
-    pip install crispy-bootstrap5
-    ```
-   5. Instale o WhiteNoise para servir arquivos estáticos:
-    ```bash
-    pip install whitenoise
-    ```
+   ```bash
+   pip install django
+   ``` 
+   3. Instale o Pillow (para manipulação de imagens):
+   ```bash
+   pip install Pillow
+   ```
+   4. Instale o <code>dj_database_url</code> para configurar o banco de dados:
+   ```bash
+   pip install dj-database-url
+   ```
+   5. Instale o <code>django-crispy-forms</code> e <code>crispy-bootstrap5</code> para melhorar os formulários:
+   ```bash
+   pip install django-crispy-forms
+   pip install crispy-bootstrap5
+   ```
+   6. Instale o WhiteNoise para servir arquivos estáticos:
+   ```bash
+   pip install whitenoise
+   ```
 Após instalar as dependências, gere o arquivo requirements.txt com o comando:
 ```bash
 pip freeze > requirements.txt
