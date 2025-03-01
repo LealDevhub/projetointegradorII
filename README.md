@@ -75,24 +75,24 @@ pip install -r requirements.txt
 ```
 Caso o arquivo <code>requirements.txt</code> não exista, instale as dependências manualmente:
 
-    1. Instale o Django:
+   1. Instale o Django:
     ```bash
     pip install django
     ``` 
-    2. Instale o Pillow (para manipulação de imagens):
+   2. Instale o Pillow (para manipulação de imagens):
     ```bash
     pip install Pillow
     ```
-    3. Instale o <code>dj_database_url</code> para configurar o banco de dados:
+   3. Instale o <code>dj_database_url</code> para configurar o banco de dados:
     ```bash
     pip install dj-database-url
     ```
-    4. Instale o <code>django-crispy-forms</code> e <code>crispy-bootstrap5</code> para melhorar os formulários:
+   4. Instale o <code>django-crispy-forms</code> e <code>crispy-bootstrap5</code> para melhorar os formulários:
     ```bash
     pip install django-crispy-forms
     pip install crispy-bootstrap5
     ```
-    5. Instale o WhiteNoise para servir arquivos estáticos:
+   5. Instale o WhiteNoise para servir arquivos estáticos:
     ```bash
     pip install whitenoise
     ```
